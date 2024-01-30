@@ -1,0 +1,44 @@
+# BEGIN WP Hide & Security Enhancer
+<IfModule mod_rewrite.c> 
+RewriteEngine On 
+RewriteBase /jasondroste/ 
+#WriteCheckString:1595976371_1332
+RewriteRule ^rewrite_test_1595976371_1332/? /jasondroste/wp-content/plugins/wp-hide-security-enhancer/include/rewrite-confirm.php [L,QSA]
+RewriteRule ^rewrite_test_static_file_1595976371_1332/? /jasondroste/wp-content/plugins/wp-hide-security-enhancer/composer.json [L,QSA]
+
+RewriteRule ^templatejason-child/(.+) /jasondroste/wp-content/themes/bb-theme-child/$1 [L,QSA]
+
+RewriteRule ^templatejason/(.+) /jasondroste/wp-content/themes/bb-theme/$1 [L,QSA]
+
+RewriteRule ^no_3/(.+) "/jasondroste/wp-content/plugins/all-in-one-wp-migration/$1" [L,QSA]
+RewriteRule ^no_4/(.+) "/jasondroste/wp-content/plugins/autoptimize/$1" [L,QSA]
+RewriteRule ^no_5/(.+) "/jasondroste/wp-content/plugins/bb-plugin/$1" [L,QSA]
+RewriteRule ^no_6/(.+) "/jasondroste/wp-content/plugins/conditional-menus/$1" [L,QSA]
+RewriteRule ^no_7/(.+) "/jasondroste/wp-content/plugins/favicon-by-realfavicongenerator/$1" [L,QSA]
+RewriteRule ^no_8/(.+) "/jasondroste/wp-content/plugins/wordfence/$1" [L,QSA]
+RewriteRule ^app/(.+) /jasondroste/wp-content/plugins/$1 [L,QSA]
+
+RewriteRule ^php_includes/(.+) /jasondroste/wp-includes/$1 [L,QSA]
+
+RewriteRule ^php_assets/(.+) /jasondroste/wp-content/uploads/$1 [L,QSA]
+
+RewriteRule ^php_content/(.+) /jasondroste/wp-content/$1 [L,QSA]
+</IfModule> 
+
+# END WP Hide & Security Enhancer
+
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /jasondroste/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /jasondroste/index.php [L]
+</IfModule>
+
+# END WordPress

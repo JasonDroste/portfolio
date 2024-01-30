@@ -1,0 +1,2 @@
+<?php if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+$environment_variable = '{"theme":{"folder_name":"bb-theme","mapped_name":"templatejason"},"child_theme":{"folder_name":"bb-theme-child","mapped_name":"templatejason-child"},"allowed_paths":["C:\/wamp64\/www\/jasondroste\/wp-content\/themes"],"cache_path":"C:\/wamp64\/www\/jasondroste\/wp-content\/cache\/wph\/","wordpress_directory":"","site_relative_path":"\/jasondroste\/"}'; ?>
